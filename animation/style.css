@@ -1,0 +1,131 @@
+.bg-test{
+    width: 400px;
+    height: 400px;
+    margin:50px auto;
+    border: 100px double black;
+    padding : 20px;
+    /* background-image: url(img.jpg); */
+    /* background-repeat: no-repeat; */
+    /* background-position:90% 10% ; */
+    /* background-attachment: fixed; */
+    /* background-size: cover;
+    background-origin: content-box;
+    background-clip: content-box; */
+    /* background: green url(img.jpg) no-repeat center /cover content-box; */
+background:  url(img.jpg) top left no-repeat,
+url(img.jpg) right bottom no-repeat ;
+}
+
+.gradient{
+    width: 400px;
+    height: 400px;
+    margin:50px auto;
+    border: 5px solid black;
+    /* background-image: linear-gradient(to left bottom,rgb(216, 98, 206),rgb(81, 70, 180),yellow); */
+    background : linear-gradient(rgba(0,255,0,0.1),rgba(0,255,0,0.2),rgba(0,255,0,0.3)),url(img.jpg) no-repeat center /cover ;
+}
+.heading{
+    color:darkgray;
+    font-size:50px ;
+    text-align: center;
+    text-shadow: 3px 5px 5px green;
+}
+.card{
+    width :300px;
+    margin:50px auto;
+    background-color: #ccc;
+    padding: 5px;
+    text-align: center;
+    box-shadow: 3px 5px 5px #777;
+}
+.card:hover{
+    box-shadow: 6px 10px 5px #aaa;
+}
+.card img{
+    width: 100%;
+}
+.box{
+    width:300px;
+    height: 200px;
+    background-color: orange;
+    /* transition-property: width;
+    transition-duration: 1s;
+    transition-delay: 1s;
+    transition-timing-function: ease-in-out; */
+    /* transition: width 1s 1s ease-in,background-color 5s; */
+    transition: all 1s;
+}
+.box:hover{
+    width:400px;
+    background-color: green;
+}
+.box1{
+    width:200px;
+    height: 200px;
+    font-size:60px;
+    background-color: orangered;
+    text-align: center;
+    padding-top: 50px ;
+    box-sizing: border-box;
+    transition: transform 1s;
+}
+.box1:hover{
+    /* transform: translate(100px,200px); */
+    /* transform: rotate(90deg); */
+    /* transform: scale(2,2); */
+    /* transform: skew(30deg,50deg); */
+    /* transform:rotateX(180deg); */
+    /* transform:rotateZ(180deg); */
+    transform: translate(100px,200px) scale(0.5,0.5) ;
+}
+.box2{
+    width:200px;
+    height: 200px;
+    font-size:60px;
+    background-color: orangered;
+    position: relative;
+    /* animation-name: anim;
+    animation-duration: 4s;
+    animation-iteration-count: 4;
+    animation-delay: 0.5s;
+    animation-direction: alternate;
+    animation-fill-mode: both; */
+    animation: anim 4s ease-in 0s infinite alternate both;
+}
+@keyframes anim{
+    /* from{
+      top:0px;
+      left:0px;
+      background-color: orangered;
+    }
+    to{
+        top:50px;
+        left:50px;
+        background-color: green;
+    } */
+    0%{
+        top:300px;
+        left:0px;
+        background-color: orangered;
+      }
+      25%{
+        top:500px;
+        left:0px;
+        background-color: green;
+      }
+      50%{
+          top:500px;
+          left:500px;
+          background-color: goldenrod;
+      }
+      75%{
+        top:0px;
+        left:500px;
+        background-color: royalblue;  
+      }
+      100%{
+        top:0px;
+        left:300px;
+        background-color: orangered;  
+      }
+}
